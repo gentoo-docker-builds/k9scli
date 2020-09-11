@@ -76,7 +76,7 @@ jobs:
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
 
           # Strip git ref prefix from portage run
-          VERSION=${{needs.check_version.outputs.version}}
+          VERSION=${{needs.check_version.outputs.LATEST}}
 
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
